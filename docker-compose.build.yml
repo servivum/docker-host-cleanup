@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  cleanup:
+    image: servivum/docker-host-cleanup
+    build:
+      context: .
+      dockerfile: docker/cleanup/Dockerfile

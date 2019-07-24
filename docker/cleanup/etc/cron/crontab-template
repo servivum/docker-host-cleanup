@@ -1,0 +1,2 @@
+{{CRON_INTERVAL}} /usr/local/bin/cleanup.sh >> /dev/stdout 2>&1
+# crontab requires an empty line at the end of the file

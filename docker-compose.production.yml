@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  cleanup:
+    image: servivum/docker-host-cleanup
+    environment:
+      CRON_INTERVAL: '0 3 * * *'
+      PRUNE_IMAGES: 'true'
+      PRUNE_CONTAINERS: 'true'
+      PRUNE_NETWORKS: 'true'
+      PRUNE_VOLUMES: 'true'
+      PRUNE_SYSTEM: 'true'
+    deploy:
+      mode: global
+    stop_grace_period: 1s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"

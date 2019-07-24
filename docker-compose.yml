@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  cleanup:
+    build:
+      context: .
+      dockerfile: docker/cleanup/Dockerfile
+    environment:
+      CRON_INTERVAL: '*/2 * * * *'
+      PRUNE_IMAGES: 'true'
+      PRUNE_CONTAINERS: 'false'
+      PRUNE_NETWORKS: 'false'
+      PRUNE_VOLUMES: 'false'
+    stop_grace_period: 1s
+    volumes:
+      - "./docker/cleanup/etc/cron/crontab-template:/etc/cron/crontab-template"
+      - "./docker/cleanup/usr/local/bin/cleanup.sh:/usr/local/bin/cleanup.sh"
+      - "./docker/cleanup/usr/local/bin/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh"
+      - "/var/run/docker.sock:/var/run/docker.sock"
