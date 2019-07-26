@@ -22,9 +22,9 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 ## Usage
 
-⚠️ **Note**: Don't use tag `latest` in production. Choose tag corresponding to used Docker version you will find with `docker version`.
+⚠️ **Note**: Don't use tag `latest` in production. Choose tag corresponding to used Docker version you will get with `docker version`.
 
-### 1. Option: Run as "Low-level" Container
+### 1. Option: Run as a "Low-level" Container
 
 ```
 docker container run \
@@ -35,7 +35,7 @@ docker container run \
     servivum/docker-host-cleanup:latest
 ```
 
-### 2. Option: Run as Service
+### 2. Option: Run as a Service
 
 ```
 docker service create \
@@ -47,7 +47,7 @@ docker service create \
     servivum/docker-host-cleanup:latest
 ```
 
-### 3. Option: Deploy as Stack
+### 3. Option: Deploy as a Stack
 
 Adapt `docker-compose.production.yml` to your needs and deploy it with:
 
