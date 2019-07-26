@@ -39,7 +39,7 @@ Control the cleanup behaviour with environment variables.
 | `PRUNE_SYSTEM` | `false` | `true` | Remove unused data |
 | `RUN_ON_STARTUP` | `false` | `true` | Run cleanup also an startup of container |
 
-### 1. Option: Run as a "Low-level" Container
+### Option 1: Run as a "Low-level" Container
 
 ```
 docker container run \
@@ -50,7 +50,7 @@ docker container run \
     servivum/docker-host-cleanup:latest
 ```
 
-### 2. Option: Run as a Service
+### Option 2: Run as a Service
 
 ```
 docker service create \
@@ -62,7 +62,7 @@ docker service create \
     servivum/docker-host-cleanup:latest
 ```
 
-### 3. Option: Deploy as a Stack
+### Option 3: Deploy as a Stack
 
 Adapt `docker-compose.production.yml` to your needs and deploy it with:
 
