@@ -37,4 +37,4 @@ then
     docker system prune --force
 fi
 
-echo "Cleanup process done"
+echo "Cleanup process done!"

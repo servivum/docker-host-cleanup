@@ -10,6 +10,7 @@ services:
       PRUNE_NETWORKS: 'true'
       PRUNE_VOLUMES: 'true'
       PRUNE_SYSTEM: 'true'
+      RUN_ON_STARTUP: 'true'
     deploy:
       mode: global
     stop_grace_period: 1s
