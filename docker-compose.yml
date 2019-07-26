@@ -4,13 +4,14 @@ services:
   cleanup:
     build:
       context: .
-      dockerfile: docker/cleanup/Dockerfile
     environment:
-      CRON_INTERVAL: '*/2 * * * *'
-      PRUNE_IMAGES: 'true'
+      CRON_INTERVAL: '* * * * *'
+      #PRUNE_IMAGES: 'true'
+      PRUNE_ALL_IMAGES: 'true'
       PRUNE_CONTAINERS: 'false'
       PRUNE_NETWORKS: 'false'
       PRUNE_VOLUMES: 'false'
+      PRUNE_SYSTEM: 'false'
     stop_grace_period: 1s
     volumes:
       - "./docker/cleanup/etc/cron/crontab-template:/etc/cron/crontab-template"

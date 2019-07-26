@@ -5,7 +5,7 @@ services:
     image: servivum/docker-host-cleanup
     environment:
       CRON_INTERVAL: '0 3 * * *'
-      PRUNE_IMAGES: 'true'
+      PRUNE_ALL_IMAGES: 'true'
       PRUNE_CONTAINERS: 'true'
       PRUNE_NETWORKS: 'true'
       PRUNE_VOLUMES: 'true'
