@@ -24,6 +24,21 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 ⚠️ **Note**: Don't use tag `latest` in production. Choose tag corresponding to used Docker version you will get with `docker version`.
 
+### Environment Variables
+
+Control the cleanup behaviour with environment variables.
+
+| **Env Var** | **Default**| **Description** |
+| --- | :---: | --- |
+| `CRON_INTERVAL` | – | Set cron schedule |
+| `PRUNE_IMAGES` | `false` | Remove unused images |
+| `PRUNE_ALL_IMAGES` | `false` | Remove all unused images, not just dangling ones |
+| `PRUNE_CONTAINERS` | `false` | Remove all stopped containers |
+| `PRUNE_NETWORKS` | `false` | Remove all unused networks |
+| `PRUNE_VOLUMES` | `false` | ⚠️ **Remove all unused local volumes** |
+| `PRUNE_SYSTEM` | `false` | Remove unused data |
+| `RUN_ON_STARTUP` | `false` | Run cleanup also an startup of container |
+
 ### 1. Option: Run as a "Low-level" Container
 
 ```
