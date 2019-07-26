@@ -45,3 +45,7 @@ Adapt `docker-compose.production.yml` to your needs and deploy it with:
 ```
 docker stack deploy -c docker-compose.production.yml srv-docker-host-cleanup
 ```
+
+## License
+
+GNU General Public License v3.0
