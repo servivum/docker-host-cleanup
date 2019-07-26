@@ -1,6 +1,13 @@
 # 🧹 Docker Host Cleanup
 
-Tool prunes images, containers, networks and volumes scheduled and keeps your Docker hosts clean.
+Tool prunes images, containers, networks and volumes scheduled and keeps your Docker hosts clean. See 
+[Docker Hub](https://hub.docker.com/r/servivum/docker-host-cleanup) for more details about it.
+
+## Supported Tags
+
+- `latest`, `19.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile)
+- `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.09)
+- `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.03)
 
 ## Technologies
 
