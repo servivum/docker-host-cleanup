@@ -28,16 +28,16 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 Control the cleanup behaviour with environment variables.
 
-| **Env Var** | **Default**| **Description** |
-| --- | :---: | --- |
-| `CRON_INTERVAL` | – | Set cron schedule |
-| `PRUNE_IMAGES` | `false` | Remove unused images |
-| `PRUNE_ALL_IMAGES` | `false` | Remove all unused images, not just dangling ones |
-| `PRUNE_CONTAINERS` | `false` | Remove all stopped containers |
-| `PRUNE_NETWORKS` | `false` | Remove all unused networks |
-| `PRUNE_VOLUMES` | `false` | ⚠️ **Remove all unused local volumes** |
-| `PRUNE_SYSTEM` | `false` | Remove unused data |
-| `RUN_ON_STARTUP` | `false` | Run cleanup also an startup of container |
+| **Name** | **Default**| **Example** | **Description** |
+| --- | :---: | :---: | --- |
+| `CRON_INTERVAL` | – | `0 3 * * *` | Set cron schedule |
+| `PRUNE_IMAGES` | `false` | `true` | Remove unused images |
+| `PRUNE_ALL_IMAGES` | `false` | `true` | Remove all unused images, not just dangling ones |
+| `PRUNE_CONTAINERS` | `false` | `true` | Remove all stopped containers |
+| `PRUNE_NETWORKS` | `false` | `true` | Remove all unused networks |
+| `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all unused local volumes** |
+| `PRUNE_SYSTEM` | `false` | `true` | Remove unused data |
+| `RUN_ON_STARTUP` | `false` | `true` | Run cleanup also an startup of container |
 
 ### 1. Option: Run as a "Low-level" Container
 
