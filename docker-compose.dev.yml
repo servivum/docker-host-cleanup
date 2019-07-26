@@ -2,7 +2,9 @@ version: "3.7"
 
 services:
   cleanup:
-    image: servivum/docker-host-cleanup
+    build:
+      context: .
+      dockerfile: 19.03/Dockerfile
     environment:
       CRON_INTERVAL: "0 3 * * *"
       PRUNE_ALL_IMAGES: "true"
@@ -11,8 +13,9 @@ services:
       #PRUNE_VOLUMES: "true"
       PRUNE_SYSTEM: "true"
       RUN_ON_STARTUP: "true"
-    deploy:
-      mode: global
     stop_grace_period: 1s
     volumes:
+      - "./docker/cleanup/etc/cron/crontab-template:/etc/cron/crontab-template"
+      - "./docker/cleanup/usr/local/bin/cleanup.sh:/usr/local/bin/cleanup.sh"
+      - "./docker/cleanup/usr/local/bin/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh"
       - "/var/run/docker.sock:/var/run/docker.sock"

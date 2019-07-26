@@ -64,10 +64,10 @@ docker service create \
 
 ### Option 3: Deploy as a Stack
 
-Adapt `docker-compose.production.yml` to your needs and deploy it with:
+Adapt `docker-compose.yml` to your needs and deploy it with:
 
 ```
-docker stack deploy -c docker-compose.production.yml srv-docker-host-cleanup
+docker stack deploy -c docker-compose.yml srv-docker-host-cleanup
 ```
 
 ## License
