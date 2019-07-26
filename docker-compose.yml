@@ -4,6 +4,7 @@ services:
   cleanup:
     build:
       context: .
+      dockerfile: 19.03/Dockerfile
     environment:
       CRON_INTERVAL: '* * * * *'
       #PRUNE_IMAGES: 'true'
