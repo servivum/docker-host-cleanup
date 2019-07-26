@@ -9,7 +9,7 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 - `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.09)
 - `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.03)
 
-⚠️ **Note**: The release of a Docker bugfix will automatically trigger a rebuild of the images on Docker Hub.
+**Note**: The images on [Docker Hub](https://hub.docker.com/r/servivum/docker-host-cleanup/tags) are automatically updated when a new version of Docker is released.
 
 ## Technologies
 
@@ -22,7 +22,7 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 ## Usage
 
-⚠️ **Note**: Don't use tag `latest` in production. Choose tag corresponding to used Docker version you will get with `docker version`.
+**Note**: Don't use tag `latest` in production. Choose tag corresponding to used Docker version you will get with `docker version`.
 
 ### Environment Variables
 
