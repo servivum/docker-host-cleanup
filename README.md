@@ -13,7 +13,7 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 ## Usage
 
-⚠️ Notice: Don't use tag `latest` in production. Choose tag corresponding to used version you will find with `docker version`.
+⚠️ Notice: Don't use tag `latest` in production. Choose tag corresponding to used Docker version you will find with `docker version`.
 
 ### 1. Run as "Low-level" Container
 
