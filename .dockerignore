@@ -2,5 +2,5 @@
 docker-compose.yml
 docker-compose.*.yml
 Dockerfile
-LICENSE
+LICENSE.md
 README.md
