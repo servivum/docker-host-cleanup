@@ -1,0 +1,36 @@
+version: "18.09-app"
+name: docker-host-cleanup
+description: "Cleanup Docker hosts scheduled"
+namespace: servivum
+maintainers:
+  - name: "Patrick Baber"
+    email: "patrick.baber@servivum.com"
+---
+version: "3.7"
+
+services:
+  cleanup:
+    image: servivum/docker-host-cleanup:18.09
+    environment:
+      CRON_INTERVAL: "${cron-interval}"
+      PRUNE_IMAGES: "${prune-images}"
+      PRUNE_ALL_IMAGES: "${prune-all-images}"
+      PRUNE_CONTAINERS: "${prune-containers}"
+      PRUNE_NETWORKS: "${prune-networks}"
+      PRUNE_VOLUMES: "${prune-volumes}"
+      PRUNE_SYSTEM: "${prune-system}"
+      RUN_ON_STARTUP: "${run-on-startup}"
+    deploy:
+      mode: global
+    stop_grace_period: 1s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+---
+cron-interval: "0 3 * * *"
+prune-images: "true"
+prune-all-images: "false"
+prune-containers: "true"
+prune-networks: "true"
+prune-volumes: "false"
+prune-system: "true"
+run-on-startup: "true"
