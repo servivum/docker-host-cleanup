@@ -9,6 +9,8 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 - `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.09)
 - `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.03)
 
+⚠️ Notice: The release of a Docker bugfix will automatically trigger a rebuild of the images on Docker Hub.
+
 ## Technologies
 
 - Docker CLI
