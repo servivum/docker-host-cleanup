@@ -10,11 +10,5 @@ sed "s/{{CRON_INTERVAL}}/$CRON_INTERVAL/g" /etc/cron/crontab-template > /etc/cro
 echo "Initializing cronjob…"
 crontab /etc/cron/crontab
 
-if [ "$RUN_ON_STARTUP" = "true" ]
-then
-    echo "Running cleanup on startup and start cron afterwards…"
-    cleanup.sh
-fi
-
 echo "Running crond…"
 exec "$@"

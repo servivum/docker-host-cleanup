@@ -37,7 +37,6 @@ Control the cleanup behaviour with environment variables.
 | `PRUNE_NETWORKS` | `false` | `true` | Remove all unused networks |
 | `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all unused local volumes** |
 | `PRUNE_SYSTEM` | `false` | `true` | Remove unused data |
-| `RUN_ON_STARTUP` | `false` | `true` | Run cleanup also an startup of container |
 
 ### Option 1: Run as a "Low-level" Container
 
@@ -46,7 +45,6 @@ docker container run \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     --env CRON_INTERVAL="0 3 * * *" \
     --env PRUNE_IMAGES=true \
-    --env RUN_ON_STARTUP=true \
     servivum/docker-host-cleanup:latest
 ```
 
@@ -58,7 +56,6 @@ docker service create \
     --mount type=bind,source=/var/run/docker.sock,destination=/var/run/docker.sock \
     --env CRON_INTERVAL="0 3 * * *" \
     --env PRUNE_IMAGES=true \
-    --env RUN_ON_STARTUP=true \
     servivum/docker-host-cleanup:latest
 ```
 
