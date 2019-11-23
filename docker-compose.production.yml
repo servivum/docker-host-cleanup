@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   cleanup:
-    image: servivum/docker-host-cleanup
+    image: servivum/docker-host-cleanup:19.03
     environment:
       CRON_INTERVAL: '0 3 * * *'
       PRUNE_ALL_IMAGES: 'true'
