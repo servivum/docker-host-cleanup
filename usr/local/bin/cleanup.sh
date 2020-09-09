@@ -3,6 +3,12 @@ set -e
 
 echo "Running cleanup process…"
 
+if [ "$PRUNE_VOLUMES" = "true" ]
+then
+    echo "Cleaning volumes…"
+    docker volume prune --force
+fi
+
 if [ "$PRUNE_ALL_IMAGES" = "true" ]
 then
     echo "Removing all images, not just dangling ones…"
@@ -23,12 +29,6 @@ if [ "$PRUNE_NETWORKS" = "true" ]
 then
     echo "Cleaning networks…"
     docker network prune --force
-fi
-
-if [ "$PRUNE_VOLUMES" = "true" ]
-then
-    echo "Cleaning volumes…"
-    docker volume prune --force
 fi
 
 if [ "$PRUNE_SYSTEM" = "true" ]
