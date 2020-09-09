@@ -6,9 +6,13 @@ services:
     environment:
       CRON_INTERVAL: '0 3 * * *'
       # PRUNE_BUILD_CACHES: 'true'
+      PRUNE_BUILD_CACHES_FILTER: 'until=5m'
       # PRUNE_CONTAINERS: 'true'
-      PRUNE_IMAGES: 'true'
+      PRUNE_CONTAINERS_FILTER: 'until=5m'
+      # PRUNE_IMAGES: 'true'
+      PRUNE_IMAGES_FILTER: 'until=5m'
       # PRUNE_NETWORKS: 'true'
+      PRUNE_NETWORKS_FILTER: 'until=5m'
       # PRUNE_VOLUMES: 'true'
     deploy:
       mode: global
