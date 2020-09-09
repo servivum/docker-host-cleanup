@@ -31,12 +31,12 @@ Control the cleanup behaviour with environment variables.
 | **Name** | **Default**| **Example** | **Description** |
 | --- | :---: | :---: | --- |
 | `CRON_INTERVAL` | – | `0 3 * * *` | Set cron schedule |
+| `PRUNE_CONTAINERS` | `false` | `true` | Remove all stopped containers |
 | `PRUNE_IMAGES` | `false` | `true` | Remove unused images |
 | `PRUNE_ALL_IMAGES` | `false` | `true` | Remove all unused images, not just dangling ones |
-| `PRUNE_CONTAINERS` | `false` | `true` | Remove all stopped containers |
 | `PRUNE_NETWORKS` | `false` | `true` | Remove all unused networks |
-| `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all unused local volumes** |
 | `PRUNE_SYSTEM` | `false` | `true` | Remove dangling images, unused containers and networks and build cache |
+| `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all unused local volumes** |
 
 ### Option 1: Run as a "Low-level" Container
 
