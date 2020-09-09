@@ -36,7 +36,7 @@ Control the cleanup behaviour with environment variables.
 | `PRUNE_CONTAINERS` | `false` | `true` | Remove all stopped containers |
 | `PRUNE_NETWORKS` | `false` | `true` | Remove all unused networks |
 | `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all unused local volumes** |
-| `PRUNE_SYSTEM` | `false` | `true` | Remove unused data |
+| `PRUNE_SYSTEM` | `false` | `true` | Remove dangling images, unused containers and networks and build cache |
 
 ### Option 1: Run as a "Low-level" Container
 
