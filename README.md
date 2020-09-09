@@ -55,7 +55,7 @@ docker container run \
 
 ```
 docker service create \
-    --name srv-docker-host-cleanup \
+    --name docker-host-cleanup \
     --mount type=bind,source=/var/run/docker.sock,destination=/var/run/docker.sock \
     --env CRON_INTERVAL="0 3 * * *" \
     --env PRUNE_IMAGES=true \
@@ -67,7 +67,7 @@ docker service create \
 Adapt `docker-compose.production.yml` to your needs and deploy it with:
 
 ```
-docker stack deploy -c docker-compose.production.yml srv-docker-host-cleanup
+docker stack deploy -c docker-compose.production.yml docker-host-cleanup
 ```
 
 ## License
