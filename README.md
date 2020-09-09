@@ -31,13 +31,13 @@ Control the cleanup behaviour with environment variables.
 | **Name** | **Default**| **Example** | **Description** |
 | --- | :---: | :---: | --- |
 | `CRON_INTERVAL` | – | `0 3 * * *` | Set cron schedule |
-| `PRUNE_BUILD_CACHES` | `false` | `true` | Remove all unused build caches |
+| `PRUNE_BUILD_CACHES` | `false` | `true` | Remove **all** unused build caches |
 | `PRUNE_BUILD_CACHES_FILTER` | - | `until=24h` | Remove filtered and unused build caches. |
-| `PRUNE_CONTAINERS` | `false` | `true` | Remove all stopped containers |
+| `PRUNE_CONTAINERS` | `false` | `true` | Remove **all** stopped containers |
 | `PRUNE_CONTAINERS_FILTER` | - | `until=24h` | Remove filtered and stopped containers. See [Docker docs](https://docs.docker.com/engine/reference/commandline/container_prune/#filtering) for more examples. |
-| `PRUNE_IMAGES` | `false` | `true` | Remove all unused images |
+| `PRUNE_IMAGES` | `false` | `true` | Remove **all** unused images |
 | `PRUNE_IMAGES_FILTER` | - | `until=24h` | Remove filtered and unused images. See [Docker docs](https://docs.docker.com/engine/reference/commandline/image_prune/#filtering) for more examples. |
-| `PRUNE_NETWORKS` | `false` | `true` | Remove unused networks. Networks will be removed after container cleanup. |
+| `PRUNE_NETWORKS` | `false` | `true` | Remove **all** unused networks. Networks will be removed after container cleanup. |
 | `PRUNE_NETWORKS_FILTER` | - | `until=24h` | Remove filtered and unused networks. Networks will be removed after container cleanup. See [Docker docs](https://docs.docker.com/engine/reference/commandline/network_prune/#filtering) for more examples. |
 | `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all local volumes which are not referenced by any containers.** Networks will be removed after container cleanup. |
 
