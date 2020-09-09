@@ -7,13 +7,15 @@ services:
       dockerfile: 19.03/Dockerfile
     environment:
       CRON_INTERVAL: '* * * * *'
-      PRUNE_BUILD_CACHES: 'false'
-      PRUNE_CONTAINERS: 'false'
-      #PRUNE_IMAGES: 'true'
-      #PRUNE_IMAGES_ALL: 'true'
-      PRUNE_NETWORKS: 'false'
-      PRUNE_VOLUMES: 'false'
-      PRUNE_SYSTEM: 'false'
+      PRUNE_BUILD_CACHES: 'true'
+      #PRUNE_BUILD_CACHES_FILTER: 'until=5m'
+      PRUNE_CONTAINERS: 'true'
+      #PRUNE_CONTAINERS_FILTER: 'until=5m'
+      PRUNE_IMAGES: 'true'
+      #PRUNE_IMAGES_FILTER: 'until=5m'
+      PRUNE_NETWORKS: 'true'
+      #PRUNE_NETWORKS_FILTER: 'until=5m'
+      PRUNE_VOLUMES: 'true'
     stop_grace_period: 1s
     volumes:
       - "./etc/cron/crontab-template:/etc/cron/crontab-template"
