@@ -5,9 +5,10 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 ## Supported Tags
 
-- `latest`, `19.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile)
-- `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.09)
-- `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/Dockerfile-18.03)
+- `latest`, `20.10` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/20.10/Dockerfile)
+- `19.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/19.03/Dockerfile)
+- `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.09/Dockerfile)
+- `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.03/Dockerfile)
 
 **Note**: The images on [Docker Hub](https://hub.docker.com/r/servivum/docker-host-cleanup/tags) are automatically updated when a new version of Docker is released.
 
