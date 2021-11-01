@@ -3,7 +3,7 @@ version: "3.8"
 services:
   cleanup:
     image: servivum/docker-host-cleanup:${VERSION:-20.10}
-    build:
+    build:  
       context: .
       dockerfile: 20.10/Dockerfile
     environment:
