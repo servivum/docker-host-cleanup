@@ -12,7 +12,7 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 - `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.09/Dockerfile)
 - `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.03/Dockerfile)
 
-**Note**: The images on [Docker Hub](https://hub.docker.com/r/servivum/docker-host-cleanup/tags) are automatically updated when a new version of Docker is released.
+**Note**: The image supports these architectures: `linux/amd64`, `linux/arm64`
 
 ## Technologies
 
@@ -25,7 +25,7 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 ## Usage
 
-**Note**: Don't use tag `latest` in production. Choose tag corresponding to used Docker version you will get with `docker version`.
+**Note**: Don't use the `latest` tag in production. Choose it according to the version of Docker you are using on your machine. Get the version with `docker version`.
 
 ### Environment Variables
 
@@ -42,11 +42,11 @@ Control the cleanup behaviour with environment variables.
 | `PRUNE_IMAGES_FILTER` | - | `until=24h` | Remove filtered and unused images. See [Docker docs](https://docs.docker.com/engine/reference/commandline/image_prune/#filtering) for more examples. |
 | `PRUNE_NETWORKS` | `false` | `true` | Remove **all** unused networks. Networks will be removed after container cleanup. |
 | `PRUNE_NETWORKS_FILTER` | - | `until=24h` | Remove filtered and unused networks. Networks will be removed after container cleanup. See [Docker docs](https://docs.docker.com/engine/reference/commandline/network_prune/#filtering) for more examples. |
-| `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all local volumes which are not referenced by any containers.** Networks will be removed after container cleanup. |
+| `PRUNE_VOLUMES` | `false` | `true` | ⚠️ **Remove all local volumes that are not referenced by any container.** Networks will be removed after container cleanup. |
 
-### Option 1: Run as a "Low-level" Container
+### Option 1: Run as a Container
 
-```
+```bash
 docker container run \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     --env CRON_INTERVAL="0 3 * * *" \
@@ -56,7 +56,7 @@ docker container run \
 
 ### Option 2: Run as a Service
 
-```
+```bash
 docker service create \
     --name docker-host-cleanup \
     --mount type=bind,source=/var/run/docker.sock,destination=/var/run/docker.sock \
@@ -69,7 +69,7 @@ docker service create \
 
 Adapt `docker-compose.production.yml` to your needs and deploy it with:
 
-```
+```bash
 docker stack deploy -c docker-compose.production.yml docker-host-cleanup
 ```
 
