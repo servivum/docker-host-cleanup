@@ -2,10 +2,10 @@ version: "3.8"
 
 services:
   cleanup:
-    image: servivum/docker-host-cleanup:${VERSION:-20.10}
-    build:  
+    image: servivum/docker-host-cleanup:${VERSION:-24.0}
+    build:
       context: .
-      dockerfile: 20.10/Dockerfile
+      dockerfile: 24.0/Dockerfile
     environment:
       CRON_INTERVAL: '* * * * *'
       PRUNE_BUILD_CACHES: 'true'

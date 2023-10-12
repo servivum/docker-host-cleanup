@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   cleanup:
-    image: servivum/docker-host-cleanup:20.10
+    image: servivum/docker-host-cleanup:24.0
     environment:
       CRON_INTERVAL: '0 3 * * *'
       # PRUNE_BUILD_CACHES: 'true'
