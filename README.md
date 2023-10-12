@@ -12,7 +12,7 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 - `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.09/Dockerfile)
 - `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.03/Dockerfile)
 
-**Note**: The image supports these architectures: `linux/amd64`, `linux/arm64`
+**Note**: The image supports these architectures: `linux/amd64`, `linux/arm64/v8`
 
 ## Technologies
 
@@ -71,6 +71,25 @@ Adapt `docker-compose.production.yml` to your needs and deploy it with:
 
 ```bash
 docker stack deploy -c docker-compose.production.yml docker-host-cleanup
+```
+
+## Contributing
+
+To release a new version on Docker Hub run:
+
+```bash
+export DOCKER_VERSION="24.0"
+
+# Init buildx
+docker buildx create --use
+
+# Build, tag and push
+docker buildx build \
+  --file $DOCKER_VERSION/Dockerfile \
+  --platform linux/amd64,linux/arm64/v8 \
+  --tag servivum/docker-host-cleanup:$DOCKER_VERSION \
+  --push \
+  .
 ```
 
 ## License
