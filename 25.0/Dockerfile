@@ -1,4 +1,4 @@
-FROM docker:20.10
+FROM docker:25.0
 LABEL maintainer="Patrick Baber <patrick.baber@servivum.com>"
 
 COPY etc/cron/crontab-template /etc/cron/crontab-template
