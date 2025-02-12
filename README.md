@@ -1,16 +1,18 @@
 # 🧹 Docker Host Cleanup
 
-Tool prunes images, containers, networks and volumes scheduled and keeps your Docker hosts clean. See 
-[Docker Hub](https://hub.docker.com/r/servivum/docker-host-cleanup) for more details about it.
+Tool prunes images, containers, networks and volumes scheduled and keeps your Docker hosts clean. See [Docker Hub](https://hub.docker.com/r/servivum/docker-host-cleanup) for more details about it.
 
 ## Supported Tags
 
-- `latest`, `24.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/24.0/Dockerfile)
-- `23.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/23.0/Dockerfile)
-- `20.10` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/20.10/Dockerfile)
-- `19.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/19.03/Dockerfile)
-- `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.09/Dockerfile)
-- `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/master/18.03/Dockerfile)
+- `latest`, `27.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/25.0/Dockerfile)
+- `26.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/25.0/Dockerfile)
+- `25.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/25.0/Dockerfile)
+- `24.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/24.0/Dockerfile)
+- `23.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/23.0/Dockerfile)
+- `20.10` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/20.10/Dockerfile)
+- `19.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/19.03/Dockerfile)
+- `18.09` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/18.09/Dockerfile)
+- `18.03` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/18.03/Dockerfile)
 
 **Note**: The image supports these architectures: `linux/amd64`, `linux/arm64/v8`
 
@@ -78,7 +80,7 @@ docker stack deploy -c docker-compose.production.yml docker-host-cleanup
 To release a new version on Docker Hub run:
 
 ```bash
-export DOCKER_VERSION="24.0"
+export DOCKER_VERSION="27.0"
 
 # Init buildx
 docker buildx create --use
