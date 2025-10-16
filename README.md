@@ -4,8 +4,10 @@ Tool prunes images, containers, networks and volumes scheduled and keeps your Do
 
 ## Supported Tags
 
-- `latest`, `27.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/25.0/Dockerfile)
-- `26.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/25.0/Dockerfile)
+- `latest`, `29.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/29.0/Dockerfile)
+- `28.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/28.0/Dockerfile)
+- `27.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/27.0/Dockerfile)
+- `26.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/26.0/Dockerfile)
 - `25.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/25.0/Dockerfile)
 - `24.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/24.0/Dockerfile)
 - `23.0` [(Dockerfile)](https://github.com/servivum/docker-host-cleanup/blob/main/23.0/Dockerfile)
@@ -80,7 +82,7 @@ docker stack deploy -c docker-compose.production.yml docker-host-cleanup
 To release a new version on Docker Hub run:
 
 ```bash
-export DOCKER_VERSION="27.0"
+export DOCKER_VERSION="29.0"
 
 # Init buildx
 docker buildx create --use
